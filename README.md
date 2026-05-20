@@ -5,7 +5,7 @@
 **Local, agent-controllable AI video dubbing.**
 YouTube link in → voice-cloned dub in 28 languages out. No cloud, no per-minute fees, no upload of your face to anyone's server.
 
-*by [@smolekoma](https://x.com/smolekoma) and [@smolemaru](https://x.com/smolemaru) &mdash; built with [Claude](https://claude.ai)*
+*by [@smolekoma](https://x.com/smolekoma) and [@smolemaru](https://x.com/smolemaru) &mdash; built with [Claude Opus 4.7](https://claude.ai)*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)

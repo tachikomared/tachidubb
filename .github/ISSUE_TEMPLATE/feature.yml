@@ -1,0 +1,57 @@
+name: 💡 Feature request
+description: Propose a new feature or enhancement
+title: "[feat] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Start with the user story, not the implementation.
+      placeholder: "When I dub long podcasts, I want X because Y."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would the feature look like? (UI, CLI flag, MCP tool…)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: What workarounds exist today? Why aren't they enough?
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Small (one file, no new deps)
+        - Medium (a few files, maybe one new optional dep)
+        - Large (architectural change, new required dep)
+      default: 0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: respects-values
+    attributes:
+      label: This proposal
+      options:
+        - label: Preserves the local-only / no-cloud default
+          required: true
+        - label: Doesn't bypass AI-disclosure / consent guardrails
+          required: true
+
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and the roadmap
+          required: true

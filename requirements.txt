@@ -1,0 +1,51 @@
+# TachiDUBB Studio — Requirements
+# Python 3.10-3.12 required (VoxCPM2 constraint)
+# Install: pip install -r requirements.txt
+
+# Core server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.9
+httpx>=0.25.0
+
+# Agent integration (MCP server for Claude Code etc.). Optional but tiny.
+# CLI works without it; only `tools/tachidubb_mcp.py` requires this.
+mcp>=1.0.0
+
+# Audio/video I/O
+soundfile>=0.12.1
+numpy>=1.24.0
+pydub>=0.25.1
+
+# Language processing
+nltk>=3.8
+
+# Video download
+yt-dlp>=2024.1.0
+
+# Transcription
+faster-whisper>=1.0.0
+# openai-whisper>=20240930  # fallback if faster-whisper unavailable
+
+# Voice cloning — Tier 1 (best quality, 8+ GB VRAM)
+voxcpm>=2.0.0
+
+# Voice cloning — Tier 2 (good quality, 3+ GB VRAM)
+# Install to enable F5-TTS as a VoxCPM alternative:
+# f5-tts>=0.9.0
+
+# Neural TTS fallback (no GPU, no cloning, always available)
+edge-tts>=6.1.9
+
+# Vocal separation — Tier 1 (recommended, ships with torch)
+# Install to enable Demucs (htdemucs_ft model):
+# demucs>=4.0.0
+
+# Vocal separation — Tier 2 (alternative to demucs)
+# audio-separator>=0.17.0
+
+# Speaker diarization (optional, needs HF_TOKEN in .env or config-user.json)
+# pyannote.audio>=3.1
+
+# PyTorch — install separately with correct CUDA version:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

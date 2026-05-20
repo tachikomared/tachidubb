@@ -1,0 +1,43 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# Runtime data
+uploads/*
+!uploads/.gitkeep
+outputs/*
+!outputs/.gitkeep
+jobs_db/*.json
+!jobs_db/.gitkeep
+tachidubb.db
+tachidubb.db-journal
+*.sqlite
+*.sqlite-journal
+
+# User-supplied reference voices (may be private)
+presets/voices/*.wav
+presets/voices/*.mp3
+!presets/voices/.gitkeep
+
+# Bundled binaries
+bin/ffmpeg*
+bin/ffprobe*
+bin/yt-dlp*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp

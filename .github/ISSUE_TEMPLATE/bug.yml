@@ -1,0 +1,87 @@
+name: 🐞 Bug report
+description: Something broke or behaves unexpectedly
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug! The more specific you can be, the faster we can fix it.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what actually happened?
+      placeholder: |
+        1. I started the server with `start.bat`
+        2. I dubbed a YouTube short into French
+        3. Expected: French voice clone
+        4. Actual: silence on segments 4 and 5
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server logs
+      description: Paste the terminal output around the failure. Redact anything sensitive.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: source
+    attributes:
+      label: Source URL or description
+      description: YouTube URL (if public) or "30s mp4 of one speaker indoors". Don't share private content.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - Windows 10
+        - Windows 11
+        - Linux (Ubuntu / Debian)
+        - Linux (other)
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU + driver
+      description: e.g. "RTX 3080 Ti, driver 555.85" or "CPU only"
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      description: Output of `python --version`
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: TachiDUBB version / commit
+      description: Tag or `git rev-parse --short HEAD`
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for duplicates
+          required: true
+        - label: I ran `python tools/tachidubb_cli.py system` and pasted relevant output above
+          required: false
+        - label: I'm on the latest `main` (or the latest release)
+          required: false
